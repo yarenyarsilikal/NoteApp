@@ -6,11 +6,11 @@ Users may create/view/edit/delete notes. Note creation and edited dates automati
 
 <h1>Screenshots</h1>
 <p align="center">
-  <img src="https://github.com/yarenyarsilikal/NoteApp/blob/main/screenshots/splash.png" width="200" title="Match Details" alt="Match Details">
-  <img src="https://github.com/yarenyarsilikal/NoteApp/blob/main/screenshots/note_list.png" width="200" title="Favored Matches" alt="Favored Matches">
-  <img src="https://github.com/yarenyarsilikal/NoteApp/blob/main/screenshots/create_note.png" width="200" title="Matches" alt="Matches">
-  <img src="https://github.com/yarenyarsilikal/NoteApp/blob/main/screenshots/edit_note_alert.png" width="200" title="Matches" alt="Matches">
-  <img src="https://github.com/yarenyarsilikal/NoteApp/blob/main/screenshots/edit_note_warning.png" width="200" title="Matches" alt="Matches">
+  <img src="https://github.com/yarenyarsilikal/NoteApp/blob/master/screenshots/splash.png" width="200" title="Match Details" alt="Match Details">
+  <img src="https://github.com/yarenyarsilikal/NoteApp/blob/master/screenshots/note_list.png" width="200" title="Favored Matches" alt="Favored Matches">
+  <img src="https://github.com/yarenyarsilikal/NoteApp/blob/master/screenshots/create_note.png" width="200" title="Matches" alt="Matches">
+  <img src="https://github.com/yarenyarsilikal/NoteApp/blob/master/screenshots/edit_note_alert.png" width="200" title="Matches" alt="Matches">
+  <img src="https://github.com/yarenyarsilikal/NoteApp/blob/master/screenshots/edit_note_warning.png" width="200" title="Matches" alt="Matches">
 
 </p>
 <h1>Techs & Libraries</h1>
@@ -39,13 +39,13 @@ Users may create/view/edit/delete notes. Note creation and edited dates automati
 </ul>
 <h1>Architecture</h1>
 <p>NoteApp uses MVVM architecture and a repository pattern.</p>
-<img src="https://github.com/yarenyarsilikal/NoteApp/blob/main/screenshots/mvvm.png" alt="architecture" style="max-width:100%;">
+<img src="https://github.com/yarenyarsilikal/NoteApp/blob/master/screenshots/mvvm.png" alt="architecture" style="max-width:100%;">
 
 </ul>
 
 </ul>
 <h1>Unit Test</h1>
 <p>NoteApp uses MVVM architecture and a repository pattern.</p>
-<img src="https://github.com/yarenyarsilikal/NoteApp/blob/main/screenshots/unit_tests.png" alt="unitests" style="max-width:100%;">
+<img src="https://github.com/yarenyarsilikal/NoteApp/blob/master/screenshots/unit_tests.png" alt="unitests" style="max-width:100%;">
 
 </ul>
