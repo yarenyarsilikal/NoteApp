@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--NoteListColors-->
+
+    <color name="titleColor">#F1E7DD</color>
+    <color name="descColor">#F6F5F3</color>
+
+
+</resources>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.yarenyarsilikal.noteapp.ui.viewmodel.NoteDetailViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/spacing_8">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="@dimen/spacing_8"
+            app:layout_constraintBottom_toTopOf="@id/operationButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewCreateDate"
+                    style="@style/NoteDate"
+                    android:layout_width="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/spacing_4"
+                    viewVisibility="@{viewModel.noteModel.createdDate}"
+                    android:padding="@dimen/spacing_4"
+                    android:text="@{viewModel.noteModel.createdDate}"
+                    tools:text="Created 31.07.2021" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/editTextTitle"
+                    style="@style/Note"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/spacing_8"
+                    android:background="@drawable/selector_edit_text"
+                    android:ems="10"
+                    android:hint="@string/title"
+                    android:padding="@dimen/spacing_12"
+                    android:text="@={viewModel.noteTitle}" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewEditDate"
+                    style="@style/NoteDate"
+                    viewVisibility="@{viewModel.noteModel.editedDate}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginVertical="@dimen/spacing_8"
+                    android:padding="@dimen/spacing_4"
+                    android:text="@{viewModel.noteModel.editedDate}"
+                    tools:text="Edited 31.07.2021" />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/imageViewNote"
+                    imageVisibility="@{viewModel.noteImageURL}"
+                    loadImageViewWithUrl="@{viewModel.noteImageURL}"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/spacing_120"
+                    android:layout_marginVertical="@dimen/spacing_8"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/editTextDesc"
+                    style="@style/NoteDesc"
+                    android:layout_width="match_parent"
+                    android:gravity="top"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="@dimen/spacing_8"
+                    android:background="@drawable/selector_edit_text"
+                    android:ems="10"
+                    android:hint="@string/type_your_note"
+                    android:minLines="8"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:padding="@dimen/spacing_8"
+                    android:text="@={viewModel.noteDescription}" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/editTextImageUrl"
+                    style="@style/NoteDesc"
+                    android:layout_width="match_parent"
+                    android:inputType="textMultiLine"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/spacing_8"
+                    android:hint="@string/image_url_optional"
+                    android:background="@drawable/selector_edit_text"
+                    android:drawableStart="@drawable/ic_attach"
+                    android:scrollHorizontally="true"
+                    android:padding="@dimen/spacing_4"
+                    android:text="@={viewModel.noteImageURL}" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <com.yarenyarsilikal.noteapp.util.OperationButton
+            android:id="@+id/operationButton"
+            setNoteMode="@{viewModel.noteMode}"
+            setOperationClick="@{viewModel.createItemOnClick}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_8"
+            android:layout_marginEnd="@dimen/spacing_8"
+            android:layout_marginBottom="@dimen/spacing_8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.yarenyarsilikal.noteapp.data.model.NoteModel" />
+    </data>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_8"
+            android:layout_marginVertical="@dimen/spacing_8"
+            app:cardCornerRadius="@dimen/spacing_8">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:elevation="@dimen/spacing_8"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_8">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewNoteTitle"
+                    style="@style/NoteTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/spacing_4"
+                    android:layout_marginTop="@dimen/spacing_4"
+                    android:text="@{model.title}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imageViewNoteImage"
+                    tools:text="My New Note" />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/imageViewNoteImage"
+                    imageVisibility="@{model.imageUrl}"
+                    loadImageViewWithUrl="@{model.imageUrl}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_marginHorizontal="@dimen/spacing_4"
+                    android:layout_marginVertical="@dimen/spacing_4"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@+id/textViewNoteTitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_corner_radius="@dimen/spacing_8" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewNoteDescription"
+                    style="@style/NoteDesc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/spacing_4"
+                    android:layout_marginVertical="@dimen/spacing_4"
+                    android:maxLines="2"
+                    android:text="@{model.description}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textViewNoteTitle"
+                    tools:text="description" />
+
+                <TextView
+                    android:id="@+id/textViewCreateDate"
+                    style="@style/NoteDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/spacing_4"
+                    android:layout_marginVertical="@dimen/spacing_4"
+                    android:text="@{model.createdDate}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textViewNoteDescription"
+                    tools:text="Created : 30.07.2021" />
+
+                <TextView
+                    android:id="@+id/textViewEditDate"
+                    style="@style/NoteDate"
+                    viewVisibility="@{model.editedDate}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/spacing_4"
+                    android:layout_marginBottom="@dimen/spacing_4"
+                    android:text="@{model.editedDate}"
+                    android:visibility="gone"
+                    app:drawableRightCompat="@drawable/ic_edit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textViewCreateDate"
+                    tools:text="Edited : 30.07.2021" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+</layout>

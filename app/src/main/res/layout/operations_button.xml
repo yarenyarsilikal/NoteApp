@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_oval_border"
+    android:elevation="@dimen/spacing_8"
+    android:outlineProvider="none"
+    android:orientation="horizontal"
+    android:padding="@dimen/spacing_8">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/imageButtonCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_4"
+        android:layout_marginVertical="@dimen/spacing_4"
+        android:background="@drawable/bg_circle"
+        android:src="@drawable/ic_create" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/imageButtonEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_4"
+        android:layout_marginVertical="@dimen/spacing_4"
+        android:background="@drawable/bg_circle"
+        android:src="@drawable/ic_edit_24" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/imageButtonDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_4"
+        android:layout_marginVertical="@dimen/spacing_4"
+        android:background="@drawable/bg_circle"
+        android:src="@drawable/ic_delete" />
+</androidx.appcompat.widget.LinearLayoutCompat>

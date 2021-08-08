@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/noteListFragment">
+
+    <fragment
+        android:id="@+id/noteDetailFragment"
+        android:name="com.yarenyarsilikal.noteapp.ui.fragment.NoteDetailFragment"
+        android:label="NoteDetailFragment" >
+        <action
+            android:id="@+id/action_noteDetailFragment_to_noteListFragment"
+            app:destination="@id/noteListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/noteListFragment"
+        android:name="com.yarenyarsilikal.noteapp.ui.fragment.NoteListFragment"
+        android:label="NoteListFragment" >
+        <action
+            android:id="@+id/action_noteListFragment_to_noteDetailFragment"
+            app:destination="@id/noteDetailFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <argument
+            android:name="argNoteModel"
+            app:argType="com.task.noteapp.data.model.NoteModel" />
+        <argument
+            android:name="argsDetailViewType"
+            app:argType="integer"
+            android:defaultValue="1" />
+    </fragment>
+</navigation>

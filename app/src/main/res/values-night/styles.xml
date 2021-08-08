@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Note">
+        <item name="android:textColor">@color/light_darker_blue</item>
+        <item name="android:textSize">@dimen/font_25</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">@dimen/spacing_4</item>
+        <item name="lineSpacing">@dimen/spacing_2</item>
+    </style>
+
+    <style name="NoteTitle">
+        <item name="android:textColor">@color/titleColor</item>
+        <item name="android:textSize">@dimen/font_18</item>
+        <item name="android:textStyle">bold</item>
+        <item name="lineSpacing">@dimen/spacing_2</item>
+    </style>
+
+    <style name="NoteDesc">
+        <item name="android:textColor">@color/descColor</item>
+        <item name="android:textSize">@dimen/font_16</item>
+        <item name="lineSpacing">@dimen/spacing_2</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="NoteDate">
+        <item name="android:textColor">@color/descColor</item>
+        <item name="android:textSize">@dimen/font_12</item>
+    </style>
+</resources>

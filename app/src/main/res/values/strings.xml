@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">NoteApp</string>
+    <string name="notes">Notes</string>
+    <string name="title">Title</string>
+    <string name="type_your_note">Type your note…</string>
+    <string name="error_title_or_desc_empty">Title and description can\'t be empty. Please check fields.</string>
+    <string name="error_invalid_url">Image url is invalid.</string>
+    <string name="delete_note">Do you want to delete current note?</string>
+    <string name="edit_note">Do you want to save edited note?</string>
+    <string name="continueProcess">Continue</string>
+    <string name="discardProcess">Discard</string>
+    <string name="image_url_optional">Image Url (Optional)</string>
+
+</resources>

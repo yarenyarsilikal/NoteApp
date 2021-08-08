@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#63ccff</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="black">#FF000000</color>
+
+    <!--NoteListColors-->
+
+    <color name="titleColor">#4D4B49</color>
+    <color name="descColor">#6B89B9</color>
+
+    <color name="light_blue">#BBC2D4</color>
+    <color name="light_darker_blue">#6B89B9</color>
+    <color name="darker_blue">#3b5c89</color>
+
+    <color name="light_pink">#ffc1e3</color>
+    <color name="light_darker_pink">#f48fb1</color>
+    <color name="darker_pink">#bf5f82</color>
+
+
+</resources>
